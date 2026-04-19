@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rapyd Apple Payment Button</title>
-  </head>
-  <body>
-    <h1>Test for Rapyd Apple Payment Button Show</h1>
-  </body>
+<html>
+<head>
+    <title>Rapyd Apple Pay Test - No Domain Verification</title>
+</head>
+<body>
+    <h1>Apple Pay Test - Domain NOT Verified</h1>
+    <p>This page embeds Rapyd Checkout Toolkit WITHOUT domain verification.</p>
+    <div id="rapyd-checkout"></div>
+    <script src="https://sandboxcheckouttoolkit.rapyd.net"></script>
+    <script>
+        let checkout = new RapydCheckoutToolkit({
+            pay_button_text: "Pay Now",
+            pay_button_color: "#4BB4D2",
+            id: "checkout_18c65b35a5a7cdff8ca085c5b8386f39",
+            style: {
+                submit: {
+                    base: {
+                        color: "white"
+                    }
+                }
+            }
+        });
+        checkout.displayCheckout();
+    </script>
+</body>
 </html>
